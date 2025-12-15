@@ -109,6 +109,13 @@ body {
     --header-height: 160px;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
 .burger {
     border-radius: 40px;
     width: 74px;

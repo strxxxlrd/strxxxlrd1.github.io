@@ -124,12 +124,12 @@ body {
 
 .base {
     height: 1152px;
-    background-image: url(/images/osnova.png);
-    /* Рекомендую переименовать файл в латиницу без пробелов */
+    background-image: url("./images/osnova.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 
 .menu {
     height: 117px;
@@ -647,17 +647,23 @@ p {
 }
 
 .rec1 {
-    background: url(/images/Rectangle1.png);
-
+    background-image: url("./images/Rectangle1.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .rec2 {
-    background: url(/images/Rectangle2.png);
+    background-image: url("./images/Rectangle2.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .rec3 {
-    background: url(/images/Rectangle3.png);
+    background-image: url("./images/Rectangle3.png");
+    background-size: cover;
+    background-position: center;
 }
+
 
 
 .roulete-text1 {
@@ -870,7 +876,7 @@ p {
 .isobrag {
     margin-top: 213px;
     padding-top: 120px;
-    background-image: url(/images/Rectangle25.png);
+    background-image: url("./images/Rectangle25.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

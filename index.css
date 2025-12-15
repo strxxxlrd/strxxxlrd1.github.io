@@ -124,7 +124,7 @@ body {
 
 .base {
     height: 1152px;
-    background-image: url(/images/Основное\ фото.png);
+    background-image: url(/images/osnova.png);
     /* Рекомендую переименовать файл в латиницу без пробелов */
     background-size: cover;
     background-repeat: no-repeat;

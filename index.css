@@ -85,6 +85,7 @@ body {
     font-size: 22px;
     letter-spacing: 0.44px;
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -129,7 +130,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 
 .menu {
     height: 117px;
@@ -416,7 +416,6 @@ p {
     justify-content: flex-start;
     gap: 34px;
     margin-left: 40px;
-
 }
 
 .feature {
@@ -434,7 +433,6 @@ p {
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
-    /* 32px */
     letter-spacing: -0.5px;
     display: flex;
     align-items: center;
@@ -535,21 +533,20 @@ p {
     scroll-behavior: smooth;
     flex-direction: row;
     gap: 24px;
-    /* Если есть gap между слайдами, добавьте */
-
 }
 
 .rectangle-roulete {
     margin-left: 30px;
-    width: 575px;
+    width: 100%;
+    max-width: 593px;
+    aspect-ratio: 593 / 630;
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
     border-radius: 20px;
     background: #FFF;
-
-    height: 603px;
     flex-shrink: 0;
 }
-
-
 
 .roulete-text {
     margin-top: 43px;
@@ -560,7 +557,6 @@ p {
 }
 
 .roulete-text2 {
-
     font-size: 32px;
     opacity: 0.4;
 }
@@ -578,16 +574,13 @@ p {
     background: var(--background-color, #F4F4F4);
 }
 
-
 .roulete::-webkit-scrollbar {
     display: none;
-    /* убрать скроллбар */
 }
 
 .roulete>.rectangle-roulete {
     scroll-snap-align: center;
     flex: 0 0 auto;
-    /* Чтобы слайды не сжимались */
 }
 
 .line {
@@ -615,21 +608,18 @@ p {
     transition: 0.3s;
 }
 
-/* Активная кнопка */
 .roulete-num.active {
     background: var(--color-dark-blue);
     color: #FFF;
     transform: scale(1.2);
 }
 
-/* Контейнер с кнопками */
 .nums {
     display: flex;
     justify-content: center;
     margin-top: -50px;
     gap: 50px;
     transition: transform 0.4s ease;
-
 }
 
 .roulete2 {
@@ -638,7 +628,6 @@ p {
 }
 
 .rectangle1-roulete {
-
     margin-top: 124px;
     margin-left: 30px;
     width: 593px;
@@ -650,21 +639,28 @@ p {
     background-image: url("./images/Rectangle1.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .rec2 {
     background-image: url("./images/Rectangle2.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .rec3 {
     background-image: url("./images/Rectangle3.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
-
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 .roulete-text1 {
     margin-left: 30px;
@@ -675,20 +671,15 @@ p {
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.5px;
-
 }
-
-
 
 .rr1 {
     display: flex;
-
 }
 
 .rr2 {
     width: 371px;
     height: 101px;
-
 }
 
 .rr-1 {
@@ -709,15 +700,12 @@ p {
     width: 371px;
     height: 101px;
     border-left: 2px solid rgba(241, 241, 241, 0.55);
-
 }
 
 .rr-2 {
-
     margin-left: 17px;
     font-size: 29px;
 }
-
 
 .rr-2-1 {
     margin-left: 17px;
@@ -727,14 +715,11 @@ p {
 }
 
 .nu {
-
     display: flex;
     width: 531px;
     height: 102px;
     border-bottom: 2px solid rgba(241, 241, 241, 0.55);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-
-
 }
 
 .rr3 {
@@ -777,7 +762,6 @@ p {
     margin-top: 0px;
 }
 
-
 .sub {
     display: flex;
     width: 942px;
@@ -786,11 +770,9 @@ p {
     justify-content: center;
     font-size: 84px;
     line-height: 100%;
-    /* 84px */
     letter-spacing: -0.5px;
     margin: auto;
 }
-
 
 .frame-24 {
     padding-top: 181px;
@@ -815,7 +797,6 @@ p {
     padding: 0 335px 0 45px;
     align-items: center;
     align-self: stretch;
-
 }
 
 .One {
@@ -839,7 +820,6 @@ p {
     width: 346px;
     height: 85px;
     padding: 8px 10px 7px 26px;
-
     align-items: center;
     gap: 36px;
     border-radius: 100px;
@@ -867,10 +847,7 @@ p {
     background: var(--color-dark-blue, #010016);
     display: flex;
     align-items: center;
-    /* по вертикали */
     justify-content: center;
-
-
 }
 
 .isobrag {
@@ -881,7 +858,6 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     height: 1080px;
-
 }
 
 input {
@@ -896,35 +872,26 @@ input:focus {
     outline: none;
 }
 
-
 .block7 {
     padding: 213px 40px 0 40px;
-    /* сверху 213px, справа 40px, снизу 0, слева 40px */
     display: flex;
     flex-direction: column;
     gap: 110px;
     max-width: 1840px;
     width: 100%;
     box-sizing: border-box;
-    /* чтобы padding учитывался в ширине */
 }
-
-
 
 .text7 {
     font-size: 84px;
     line-height: 100%;
-    /* 84px */
     letter-spacing: -0.5px;
     color: var(--color-dark-blue, #010016);
-
 }
 
 .text7 p {
     margin: 0;
-    /* убирает отступы между абзацами */
     line-height: 0.9;
-    /* на всякий случай */
 }
 
 .opa7 {
@@ -956,38 +923,29 @@ input:focus {
     align-self: stretch;
     border-radius: 24px;
     background: #FFF;
-
-
     color: var(--color-dark-blue, #010016);
     font-size: 32px;
     font-style: normal;
     line-height: 100%;
     letter-spacing: 0.5px;
-
 }
 
 .faq-question {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* текст слева, svg справа */
     width: 100%;
-    /* если нужно растянуть контейнер */
 }
 
 .faq-answer {
-
     display: none;
     opacity: 0.4;
 }
-
-
 
 footer {
     margin-top: 388px;
     width: 100%;
     height: auto;
-    /* Changed from fixed height to auto for better responsiveness */
     background: #B9B9B9;
 }
 
@@ -995,14 +953,12 @@ footer {
     padding-top: 60px;
     margin-left: 40px;
     margin-right: 40px;
-    /* Added for symmetry */
 }
 
 .footer-items {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    /* Added gap for better spacing */
 }
 
 .talk {
@@ -1031,7 +987,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* Added gap between contact items */
     margin: 0;
 }
 
@@ -1076,13 +1031,11 @@ footer {
 
 .be-text p:first-child {
     font-size: 32px;
-    /* Assumed size to match talk2 */
     font-weight: 500;
 }
 
 .be-text p:last-child {
     font-size: 24px;
-    /* Assumed smaller size for description */
     opacity: 0.75;
 }
 
@@ -1130,7 +1083,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
-    /* Spacing from top content */
     padding-bottom: 60px;
 }
 
@@ -1158,10 +1110,237 @@ footer {
     height: 10px;
 }
 
+/* Media Queries for Responsiveness */
+
+/* Large desktops (up to 1440px) - base styles apply */
+
+/* Desktops and laptops (up to 1200px) */
 @media (max-width: 1200px) {
-    .footer-items {
+    body {
+        font-size: 18px;
+    }
+
+    .menu {
+        margin-left: 30px;
+        margin-right: 30px;
+        height: auto;
+        padding: 15px;
+        border-radius: 60px;
+    }
+
+    .text1,
+    .text2,
+    .years,
+    .text3 {
+        width: 100%;
+        margin-left: 20px;
+        padding: 0 20px;
+        text-align: left;
+        font-size: 60px;
+    }
+
+    .text2 {
+        font-size: 40px;
+    }
+
+    .years {
+        font-size: 50px;
+        margin-left: 0;
+        padding: 0 20px;
+    }
+
+    .text3 {
+        font-size: 60px;
+        margin-top: 300px;
+    }
+
+    .plashka1,
+    .plashka2,
+    .plashka3 {
+        width: 100%;
+        max-width: none;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px;
+        gap: 30px;
+        height: auto;
+    }
+
+    .plashki {
+        gap: 20px;
+    }
+
+    .bottom {
+        gap: 200px;
         flex-direction: column;
         align-items: center;
+    }
+
+    .delivery {
+        width: 100%;
+        margin-top: 300px;
+        margin-right: 0;
+        padding: 0 20px;
+        height: auto;
+    }
+
+    .tier {
+        width: 100%;
+        padding: 0 20px;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 150px;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: center;
+        height: auto;
+    }
+
+    .knop {
+        width: 100px;
+        height: 90px;
+        padding: 30px;
+    }
+
+    .rectangle {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        gap: 40px;
+    }
+
+    .rectangle-items {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .icon1,
+    .icon2,
+    .icon3 {
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .text-group {
+        font-size: 60px;
+        margin-left: 20px;
+    }
+
+    .roulete {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .rectangle-roulete {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .roulete-text {
+        font-size: 32px;
+    }
+
+    .roulete-text2 {
+        font-size: 24px;
+    }
+
+    .nums {
+        gap: 30px;
+    }
+
+    .roulete-num {
+        width: 100px;
+        height: 70px;
+        font-size: 24px;
+    }
+
+    .sub {
+        width: 100%;
+        font-size: 60px;
+        padding: 0 20px;
+    }
+
+    .frame-24 {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .Product,
+    .One,
+    .get {
+        padding: 0 20px;
+        height: auto;
+    }
+
+    .sub2 {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .but-sub {
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    .but-strela {
+        width: 60px;
+        height: 60px;
+    }
+
+    .block7 {
+        padding: 150px 20px 0;
+    }
+
+    .text7 {
+        font-size: 60px;
+    }
+
+    .questions {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        column-gap: 0;
+        row-gap: 30px;
+    }
+
+    .questions > .left-column,
+    .questions > .right-column {
+        width: 100%;
+    }
+
+    .faq-card {
+        padding: 40px 20px;
+        font-size: 24px;
+    }
+
+    footer {
+        margin-top: 200px;
+    }
+
+    .foot {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .footer-items {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 60px;
     }
 
     .be,
@@ -1169,45 +1348,184 @@ footer {
         width: 100%;
     }
 
+    .email {
+        height: auto;
+        padding: 10px;
+    }
+
+    .email-input {
+        font-size: 20px;
+    }
+
+    .email-button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
+        margin-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .talk1 {
+        font-size: 32px;
+    }
+
+    .talk2 {
+        font-size: 24px;
+    }
+
+    .about {
+        font-size: 28px;
+        gap: 30px;
+    }
+
+    .be-text p:first-child {
+        font-size: 24px;
+    }
+
+    .be-text p:last-child {
+        font-size: 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .social {
+        font-size: 18px;
     }
 }
 
-
-
-
-/* Добавляем responsivity */
+/* Tablets (up to 768px) */
 @media (max-width: 768px) {
-    .text1 {
-        font-size: 40px;
-        width: 100%;
-        margin-left: 20px;
+    body {
+        font-size: 16px;
     }
 
-    .bottom {
-        flex-direction: column;
-        gap: 20px;
+    :root {
+        --header-height: 120px;
     }
 
-    .plashki {
-        gap: 16px;
+    .burger {
+        width: 60px;
+        height: 50px;
+        padding: 12px 15px;
+        gap: 8px;
     }
 
-    .delivery {
-        margin-top: 200px;
-        width: 100%;
-        margin-right: 0;
+    .base {
+        height: auto;
+        padding-top: 30px;
     }
 
     .menu {
+        height: auto;
+        border-radius: 60px;
+        padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .butt {
+        padding: 8px 8px 8px 18px;
+        gap: 18px;
+    }
+
+    .strela {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .text1 {
+        font-size: 42px;
+        margin-top: 100px;
+        margin-left: 20px;
+        height: auto;
+        width: auto;
+    }
+
+    .plashka1,
+    .plashka2,
+    .plashka3 {
+        border-radius: 80px;
+        padding: 20px;
+        gap: 30px;
+        height: auto;
+        margin-top: 150px;
         margin-left: 20px;
         margin-right: 20px;
     }
 
-    .rectangle {
+    .plashka-items {
+        font-size: 18px;
+    }
+
+    .text2 {
+        font-size: 28px;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .button2 {
+        width: 200px;
+        height: 50px;
+        padding: 8px 8px 8px 16px;
+        gap: 30px;
+        border-radius: 30px;
+    }
+
+    .delivery {
+        width: 100%;
+        height: auto;
+        gap: 30px;
+        margin-top: 200px;
+        padding: 0 20px;
+    }
+
+    .strela2 {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+    }
+
+    .book {
+        font-size: 18px;
+    }
+
+    .bottom {
+        gap: 100px;
         flex-direction: column;
+    }
+
+    .years {
+        font-size: 36px;
+        margin-top: 150px;
+        margin-left: 0;
+        padding: 0 20px;
+    }
+
+    .ic {
+        width: 60px;
+        height: 60px;
+        margin-top: 100px;
+        margin-left: 20px;
+    }
+
+    .text3 {
+        font-size: 40px;
+        margin-top: 200px;
+        margin-left: 20px;
+    }
+
+    .rectangle {
+        margin-top: 80px;
         gap: 20px;
     }
 
@@ -1216,42 +1534,690 @@ footer {
         height: auto;
     }
 
-    .icon1,
-    .icon2,
-    .icon3 {
+    .ellipse {
+        width: 60px;
+        height: 60px;
+        padding: 8px 16px;
+        border-radius: 50px;
+    }
+
+    .features {
+        gap: 20px;
+        margin-left: 20px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .text-group {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .tier {
+        margin-top: 150px;
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .buttons {
         width: 100%;
         height: auto;
-        margin: 20px auto;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .knop {
+        width: 100px;
+        height: 90px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    .strela-butt {
+        width: 25px;
+        height: 25px;
+    }
+
+    .roulete {
+        margin-top: 60px;
+        max-width: 100%;
+        gap: 16px;
+    }
+
+    .rectangle-roulete {
+        aspect-ratio: auto;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .roulete-text {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 28px;
+    }
+
+    .roulete-text2 {
+        font-size: 20px;
+    }
+
+    .img-ic {
+        width: 70px;
+        height: 55px;
+        padding: 12px 15px;
+        border-radius: 18px;
+        gap: 8px;
+    }
+
+    .line {
+        margin-top: 100px;
+        height: 8px;
+    }
+
+    .roulete-num {
+        width: 90px;
+        height: 70px;
+        padding: 12px 15px;
+        font-size: 24px;
+        border-radius: 15px;
+    }
+
+    .nums {
+        margin-top: -40px;
+        gap: 30px;
+    }
+
+    .roulete2 {
+        gap: 40px;
+    }
+
+    .rectangle1-roulete {
+        margin-top: 80px;
+        margin-left: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .rr-1 {
+        width: 70px;
+        height: 80px;
+        font-size: 60px;
+    }
+
+    .rr-1-2 {
+        font-size: 18px;
+    }
+
+    .rr2 {
+        margin-left: 20px;
+        width: auto;
+        height: auto;
+        border-left-width: 1px;
+    }
+
+    .rr-2 {
+        margin-left: 12px;
+        font-size: 22px;
+    }
+
+    .rr-2-1 {
+        margin-left: 12px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .nu {
+        width: 100%;
+        height: auto;
+        border-bottom-width: 1px;
+    }
+
+    .rr3 {
+        margin-top: 200px;
+        width: 100%;
+        height: auto;
+        padding: 25px 15px;
+        border-radius: 18px;
+    }
+
+    .rr-3 {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .sub {
+        height: auto;
+        font-size: 40px;
+        letter-spacing: -0.3px;
+    }
+
+    .frame-24 {
+        padding-top: 120px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .pog {
+        border-radius: 150px;
+        border-width: 2px;
+    }
+
+    .Product,
+    .One,
+    .get {
+        height: 100px;
+        padding: 0 150px 0 30px;
+    }
+
+    .sub2 {
+        width: 100%;
+        height: 70px;
+        padding: 6px 8px 5px 20px;
+        gap: 25px;
+        border-radius: 80px;
+    }
+
+    .but-sub {
+        font-size: 22px;
+        padding-left: 20px;
+    }
+
+    .but-strela {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+    }
+
+    .isobrag {
+        margin-top: 150px;
+        padding-top: 80px;
+        height: 800px;
+    }
+
+    .block7 {
+        padding: 150px 20px 0;
+        gap: 80px;
+    }
+
+    .text7 {
+        font-size: 40px;
+    }
+
+    .questions {
+        row-gap: 20px;
+    }
+
+    .faq-card {
+        padding: 40px 30px;
+        font-size: 24px;
+    }
+
+    .footer-items {
+        gap: 40px;
+    }
+
+    .talk1 {
+        font-size: 28px;
+        letter-spacing: 0.56px;
+    }
+
+    .talk2 {
+        font-size: 20px;
+        letter-spacing: 0.1px;
+        gap: 15px;
+    }
+
+    .about {
+        font-size: 24px;
+        letter-spacing: 0.48px;
+        gap: 30px;
+    }
+
+    .be {
+        gap: 40px;
+    }
+
+    .be-text p:first-child {
+        font-size: 20px;
+    }
+
+    .be-text p:last-child {
+        font-size: 16px;
+    }
+
+    .email {
+        height: 60px;
+        padding: 6px 6px 5px 20px;
+        border-width: 1px;
+        border-radius: 80px;
+    }
+
+    .email-input {
+        font-size: 18px;
+    }
+
+    .email-button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .footer-bottom {
+        margin-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .social {
+        font-size: 18px;
+        gap: 15px;
+    }
+
+    .social svg {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .burger {
+        width: 50px;
+        height: 40px;
+        padding: 10px 12px;
+        gap: 6px;
+    }
+
+    .menu {
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 50px;
+    }
+
+    .butt {
+        padding: 6px 6px 6px 12px;
+        gap: 12px;
+    }
+
+    .strela {
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+    }
+
+    .text1 {
+        font-size: 32px;
+        margin-top: 80px;
+        margin-left: 10px;
+        letter-spacing: 0.3px;
     }
 
     .plashka1,
     .plashka2,
     .plashka3 {
-        width: auto;
-        max-width: 100%;
+        border-radius: 60px;
+        padding: 15px;
+        gap: 20px;
+        margin-top: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .plashka-items {
+        font-size: 16px;
     }
 
     .text2 {
-        font-size: 32px;
-        width: 100%;
+        font-size: 22px;
+        letter-spacing: 0.3px;
+    }
+
+    .button2 {
+        width: 180px;
+        height: 45px;
+        padding: 6px 6px 6px 12px;
+        gap: 20px;
+        border-radius: 25px;
+    }
+
+    .delivery {
+        gap: 20px;
+        margin-top: 150px;
+    }
+
+    .strela2 {
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+    }
+
+    .book {
+        font-size: 16px;
+    }
+
+    .bottom {
+        gap: 50px;
     }
 
     .years {
-        font-size: 48px;
-        margin-left: 0;
-        padding: 0 20px;
-    }
-
-    .text3 {
-        font-size: 56px;
-        margin-left: 20px;
+        font-size: 28px;
+        margin-top: 100px;
+        letter-spacing: -0.5px;
     }
 
     .ic {
-        margin-left: 20px;
+        width: 50px;
+        height: 50px;
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+
+    .text3 {
+        font-size: 30px;
+        margin-top: 150px;
+        margin-left: 10px;
     }
 
     .rectangle {
-        margin-left: 20px;
+        margin-top: 60px;
+        gap: 15px;
+    }
+
+    .ellipse {
+        width: 50px;
+        height: 50px;
+        padding: 6px 12px;
+        border-radius: 40px;
+    }
+
+    .features {
+        gap: 15px;
+        margin-left: 10px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        letter-spacing: -0.3px;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .text-group {
+        font-size: 30px;
+        letter-spacing: -0.3px;
+        margin-left: 10px;
+    }
+
+    .tier {
+        margin-top: 100px;
+        gap: 20px;
+    }
+
+    .buttons {
+        gap: 15px;
+    }
+
+    .knop {
+        width: 80px;
+        height: 70px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .strela-butt {
+        width: 20px;
+        height: 20px;
+    }
+
+    .roulete {
+        margin-top: 40px;
+        gap: 12px;
+    }
+
+    .rectangle-roulete {
+        border-radius: 10px;
+    }
+
+    .roulete-text {
+        margin-top: 20px;
+        margin-left: 15px;
+        font-size: 22px;
+        letter-spacing: -0.3px;
+    }
+
+    .roulete-text2 {
+        font-size: 16px;
+    }
+
+    .img-ic {
+        width: 60px;
+        height: 45px;
+        padding: 10px 12px;
+        border-radius: 15px;
+        gap: 6px;
+    }
+
+    .line {
+        margin-top: 80px;
+        height: 6px;
+    }
+
+    .roulete-num {
+        width: 70px;
+        height: 50px;
+        padding: 10px 12px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+    .nums {
+        margin-top: -30px;
+        gap: 20px;
+    }
+
+    .roulete2 {
+        gap: 30px;
+    }
+
+    .rectangle1-roulete {
+        margin-top: 60px;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+
+    .rr-1 {
+        width: 50px;
+        height: 60px;
+        font-size: 40px;
+    }
+
+    .rr-1-2 {
+        font-size: 14px;
+    }
+
+    .rr2 {
+        margin-left: 15px;
+        border-left-width: 1px;
+    }
+
+    .rr-2 {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .rr-2-1 {
+        margin-left: 10px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .rr3 {
+        margin-top: 150px;
+        padding: 20px 10px;
+        border-radius: 15px;
+    }
+
+    .rr-3 {
+        font-size: 20px;
+    }
+
+    .sub {
+        font-size: 30px;
+    }
+
+    .frame-24 {
+        padding-top: 80px;
+        gap: 15px;
+    }
+
+    .pog {
+        border-radius: 100px;
+        border-width: 1px;
+    }
+
+    .Product,
+    .One,
+    .get {
+        height: 80px;
+        padding: 0 100px 0 20px;
+    }
+
+    .sub2 {
+        height: 60px;
+        padding: 5px 6px 4px 15px;
+        gap: 20px;
+        border-radius: 60px;
+    }
+
+    .but-sub {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    .but-strela {
+        width: 45px;
+        height: 45px;
+        border-radius: 25px;
+    }
+
+    .isobrag {
+        margin-top: 100px;
+        padding-top: 60px;
+        height: 600px;
+    }
+
+    .block7 {
+        padding: 100px 10px 0;
+        gap: 60px;
+    }
+
+    .text7 {
+        font-size: 30px;
+    }
+
+    .faq-card {
+        padding: 30px 20px;
+        font-size: 18px;
+    }
+
+    footer {
+        margin-top: 150px;
+    }
+
+    .foot {
+        padding-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .footer-items {
+        gap: 30px;
+    }
+
+    .talk {
+        gap: 40px;
+    }
+
+    .talk1 {
+        font-size: 24px;
+        letter-spacing: 0.48px;
+    }
+
+    .talk2 {
+        font-size: 18px;
+        letter-spacing: 0.09px;
+        gap: 10px;
+    }
+
+    .about {
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        gap: 20px;
+    }
+
+    .be {
+        gap: 30px;
+    }
+
+    .be-text p:first-child {
+        font-size: 18px;
+    }
+
+    .be-text p:last-child {
+        font-size: 14px;
+    }
+
+    .email {
+        height: 50px;
+        padding: 5px 5px 4px 15px;
+        border-radius: 60px;
+    }
+
+    .email-input {
+        font-size: 16px;
+    }
+
+    .email-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .social {
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .social svg {
+        width: 6px;
+        height: 6px;
     }
 }

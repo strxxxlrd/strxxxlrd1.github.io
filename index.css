@@ -647,16 +647,16 @@ p {
 }
 
 .rec1 {
-    background: url(/images/Rectangle\ 1.png);
+    background: url(/images/Rectangle1.png);
 
 }
 
 .rec2 {
-    background: url(/images/Rectangle\ 2.png);
+    background: url(/images/Rectangle2.png);
 }
 
 .rec3 {
-    background: url(/images/Rectangle\ 3.png);
+    background: url(/images/Rectangle3.png);
 }
 
 
@@ -870,7 +870,7 @@ p {
 .isobrag {
     margin-top: 213px;
     padding-top: 120px;
-    background-image: url(/images/Rectangle\ 25.png);
+    background-image: url(/images/Rectangle25.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
